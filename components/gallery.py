@@ -1,115 +1,114 @@
-# import streamlit as st
-# import os
-
-
-# def show_gallery():
-
-#     st.title("✨ Our Work")
-
-#     folders = {
-#         "💛 Haldi Ceremony": "gallery/haldi",
-#         "🎬 Cinematic Weddings": "gallery/cinematic",
-#         "💍 Wedding Photography": "gallery/wedding",
-#         # "🎂 Birthday Memories": "gallery/birthday",
-#         "🎉 Party Celebrations": "gallery/party",
-#         "🎉 Party Celebrations": "gallery/mehandi",
-#     }
-
-#     for title, folder in folders.items():
-
-#         st.header(title)
-
-#         if os.path.exists(folder):
-
-#             files = os.listdir(folder)
-
-#             cols = st.columns(3)
-
-#             for i, file in enumerate(files):
-
-#                 path = os.path.join(folder, file)
-
-#                 with cols[i % 3]:
-#                     st.image(path, use_container_width=True)
-
 import streamlit as st
-import os
 
 
-def show_gallery():
+def member_card(image, name, role, experience, description, instagram_url):
 
-    st.title("✨ Our Work")
-    st.write("A glimpse into our cinematic storytelling and unforgettable moments.")
+    col1, col2 = st.columns([1, 2])
 
-    folders = {
-        "🎂 Birthday Celebration": {
-            "path": "gallery/birthday",
-            "desc": "Cherishing every birthday with joyful moments, laughter, and unforgettable memories."
-        },
+    with col1:
+        st.image(image, width=200)
 
-        "📸 Candid Photography": {
-            "path": "gallery/Candit",
-            "desc": "Natural, unposed moments that beautifully capture genuine emotions and expressions."
-        },
+    with col2:
+        st.markdown(f"### {name}")
+        st.markdown(f"**🎖️ Role:** {role}")
+        st.markdown(f"**📅 Experience:** {experience}")
 
-        "💛 Haldi Ceremony": {
-            "path": "gallery/haldi",
-            "desc": "Bright colors, joyful rituals, and heartfelt emotions from the Haldi ceremony."
-        },
+        st.markdown(
+            f'**📷 Instagram:** <a href="{instagram_url}" target="_blank">View Profile</a>',
+            unsafe_allow_html=True,
+        )
 
-        "👶 Naming Ceremony": {
-            "path": "gallery/Naming Ceremony",
-            "desc": "Precious moments celebrating the arrival and naming of a new family member."
-        },
+        # Display bullet points properly
+        st.markdown(description)
 
-        "🌄 Outdoor Shoots": {
-            "path": "gallery/outdoor",
-            "desc": "Creative outdoor photography with stunning natural backdrops and cinematic visuals."
-        },
+    st.divider()
 
-        "💍 Ring Ceremony": {
-            "path": "gallery/Ring Ceremony",
-            "desc": "Capturing the love, excitement, and beautiful moments of your engagement ceremony."
-        },
 
-        "👰 Wedding Photography": {
-            "path": "gallery/wedding",
-            "desc": "Timeless wedding memories captured with elegance, emotion, and perfection."
-        },
-    }
+def show_team():
 
-    for title, data in folders.items():
+    st.title("❤️ Meet Our Team")
+    st.write("A passionate team dedicated to capturing cinematic wedding memories.")
 
-        st.header(title)
-        st.write(data["desc"])
+    # ================= Row 1 =================
+    col1, col2 = st.columns(2)
 
-        folder = data["path"]
+    with col1:
+        member_card(
+            "images/mannu.jpeg",
+            "🎬 Mannu Airy",
+            "Owner • Main & Lead Videographer",
+            "2012 – Present",
+            """
+- Founder of Babita Film Production
+- Lead Videographer
+- Drone Specialist
+- Cinematic wedding film expert
+- Photo and Video editor expert
+            """,
+            "https://www.instagram.com/babita_films?igsh=MTVxbnBnYXY5ZmR6aA=="
+        )
 
-        if os.path.exists(folder):
+    with col2:
+        member_card(
+            "images/sonu.jpeg",
+            "📸 Sonu Walida",
+            "Main Cameraman",
+            "2013 – Present",
+            """
+- Wedding Photographer
+- Cinematic storytelling expert
+- Candid photography specialist
+- Photo and Video editor expert
+            """,
+            "https://www.instagram.com/waldiasonu?igsh=MWh0MGo2bXEzdDg5cg=="
+        )
 
-            # Load only image files
-            files = sorted([
-                f for f in os.listdir(folder)
-                if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))
-            ])
+    # ================= Row 2 =================
+    col3, col4 = st.columns(2)
 
-            if files:
-                cols = st.columns(3)
+    with col3:
+        member_card(
+            "images/sunil.jpeg",
+            "📸 Sunil Singh Soun",
+            "Photo • Video • Drone",
+            "2007 – Present (Babita Film Production: 2013 – Present)",
+            """
+- Experienced photographer
+- Videography specialist
+- Drone operator
+- Photo and Video editor expert
+- 15+ years experience
+            """,
+            "https://www.instagram.com/sunilsingh1529?igsh=cjR2aGs2Z3NwcGR2"
+        )
 
-                for i, file in enumerate(files):
+    with col4:
+        member_card(
+            "images/vinod.jpeg",
+            "📸 Vinod Singh Jyala",
+            "Photographer & Videographer",
+            "2022 – Present",
+            """
+- Creative photographer
+- Wedding videographer
+- Modern cinematic style
+            """,
+            "https://www.instagram.com/vinodjyala?igsh=MW0weGs0YXRiZ3V6Mw=="
+        )
 
-                    path = os.path.join(folder, file)
+    # ================= Row 3 (Centered) =================
+    left, center, right = st.columns([1, 2, 1])
 
-                    with cols[i % 3]:
-                        st.image(
-                            path,
-                            caption=os.path.splitext(file)[0],
-                            use_container_width=True,
-                        )
-            else:
-                st.info("No images found in this folder.")
-
-        else:
-            st.warning(f"Folder not found: {folder}")
-
-        st.divider()
+    with center:
+        member_card(
+            "images/manoj.jpeg",
+            "📸 Manoj Singh Dhami",
+            "Photography & Videography",
+            "2021 – Present",
+            """
+- Wedding photographer
+- Videography specialist
+- Detail-focused storytelling
+            """,
+            "https://www.instagram.com/manoj.dhami.716533?igsh=MXJraGcyaHl3b2YzeA=="
+        )
