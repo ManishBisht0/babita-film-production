@@ -43,7 +43,7 @@ def show_gallery():
 
     folders = {
         "🎂 Birthday Celebration": {
-            "path": "gallery/Birthday",
+            "path": "gallery/birthday",
             "desc": "Cherishing every birthday with joyful moments, laughter, and unforgettable memories."
         },
 
