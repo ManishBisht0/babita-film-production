@@ -174,11 +174,11 @@ with col1:
 
 with col2:
     st.markdown("""
-    ## Mr. Babita
-    Founder & Lead Photographer
+    ## Mr. Mannu Airy
+    Owner & Lead Photographer
 
     With years of experience in wedding and event photography,
-    Mr. Babita has dedicated his life to capturing emotions,
+    Mr. Mannu has dedicated his life to capturing emotions,
     love, and unforgettable moments.
 
     His passion for photography goes beyond taking pictures—
