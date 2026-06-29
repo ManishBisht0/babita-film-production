@@ -42,7 +42,9 @@ def show_team():
 • Founder of Babita Film Production  
 • Lead Videographer  
 • Drone Specialist  
-• Cinematic wedding film expert  
+• Cinematic wedding film expert
+• Photo and Video editor expert
+
             """,
             "https://www.instagram.com/babita_films?igsh=MTVxbnBnYXY5ZmR6aA=="
         )
@@ -56,7 +58,8 @@ def show_team():
             """
 • Wedding Photographer  
 • Cinematic storytelling expert  
-• Candid photography specialist  
+• Candid photography specialist 
+• Photo and Video editor expert 
             """,
             "https://www.instagram.com/waldiasonu?igsh=MWh0MGo2bXEzdDg5cg=="
         )
@@ -73,7 +76,8 @@ def show_team():
             """
 • Experienced photographer  
 • Videography specialist  
-• Drone operator  
+• Drone operator
+• Photo and Video editor expert
 • 15+ years experience  
             """,
             "https://www.instagram.com/sunilsingh1529?igsh=cjR2aGs2Z3NwcGR2"

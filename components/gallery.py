@@ -39,32 +39,42 @@ import os
 def show_gallery():
 
     st.title("✨ Our Work")
-    st.write("A glimpse into our cinematic storytelling and unforgettable wedding moments.")
+    st.write("A glimpse into our cinematic storytelling and unforgettable moments.")
 
     folders = {
+        "🎂 Birthday Celebration": {
+            "path": "gallery/Birthday",
+            "desc": "Cherishing every birthday with joyful moments, laughter, and unforgettable memories."
+        },
+
+        "📸 Candid Photography": {
+            "path": "gallery/Candit",
+            "desc": "Natural, unposed moments that beautifully capture genuine emotions and expressions."
+        },
+
         "💛 Haldi Ceremony": {
-            "path": "gallery/haldi",
-            "desc": "Bright colors, joyful rituals, and pure emotions captured in golden haldi moments."
+            "path": "gallery/Haldi",
+            "desc": "Bright colors, joyful rituals, and heartfelt emotions from the Haldi ceremony."
         },
 
-        "🎬 Cinematic Weddings": {
-            "path": "gallery/cinematic",
-            "desc": "A film-like storytelling experience where every frame feels like a movie scene."
+        "👶 Naming Ceremony": {
+            "path": "gallery/Naming Ceremony",
+            "desc": "Precious moments celebrating the arrival and naming of a new family member."
         },
 
-        "💍 Wedding Photography": {
-            "path": "gallery/wedding",
+        "🌄 Outdoor Shoots": {
+            "path": "gallery/outdoor",
+            "desc": "Creative outdoor photography with stunning natural backdrops and cinematic visuals."
+        },
+
+        "💍 Ring Ceremony": {
+            "path": "gallery/Ring Ceremony",
+            "desc": "Capturing the love, excitement, and beautiful moments of your engagement ceremony."
+        },
+
+        "👰 Wedding Photography": {
+            "path": "gallery/Wedding",
             "desc": "Timeless wedding memories captured with elegance, emotion, and perfection."
-        },
-
-        "🎉 Party Celebrations": {
-            "path": "gallery/party",
-            "desc": "Energetic, fun-filled moments of celebration, laughter, and unforgettable memories."
-        },
-
-        "🌸 Mehandi Moments": {
-            "path": "gallery/mehandi",
-            "desc": "Beautiful henna rituals filled with tradition, love, and emotional family bonding."
         },
     }
 
@@ -77,13 +87,29 @@ def show_gallery():
 
         if os.path.exists(folder):
 
-            files = os.listdir(folder)
+            # Load only image files
+            files = sorted([
+                f for f in os.listdir(folder)
+                if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))
+            ])
 
-            cols = st.columns(3)
+            if files:
+                cols = st.columns(3)
 
-            for i, file in enumerate(files):
+                for i, file in enumerate(files):
 
-                path = os.path.join(folder, file)
+                    path = os.path.join(folder, file)
 
-                with cols[i % 3]:
-                    st.image(path, use_container_width=True)
+                    with cols[i % 3]:
+                        st.image(
+                            path,
+                            caption=os.path.splitext(file)[0],
+                            use_container_width=True,
+                        )
+            else:
+                st.info("No images found in this folder.")
+
+        else:
+            st.warning(f"Folder not found: {folder}")
+
+        st.divider()
