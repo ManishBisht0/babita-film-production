@@ -53,7 +53,7 @@ def show_gallery():
         },
 
         "💛 Haldi Ceremony": {
-            "path": "gallery/Haldi",
+            "path": "gallery/haldi",
             "desc": "Bright colors, joyful rituals, and heartfelt emotions from the Haldi ceremony."
         },
 
@@ -73,7 +73,7 @@ def show_gallery():
         },
 
         "👰 Wedding Photography": {
-            "path": "gallery/Wedding",
+            "path": "gallery/wedding",
             "desc": "Timeless wedding memories captured with elegance, emotion, and perfection."
         },
     }
