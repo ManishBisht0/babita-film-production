@@ -14,12 +14,12 @@ def member_card(image, name, role, experience, description, instagram_url):
         st.markdown(f"**📅 Experience:** {experience}")
 
         st.markdown(
-            f"**📷 Instagram:** "
-            f'<a href="{instagram_url}" target="_blank">View Profile</a>',
+            f'**📷 Instagram:** <a href="{instagram_url}" target="_blank">View Profile</a>',
             unsafe_allow_html=True,
         )
 
-        st.write(description)
+        # Display bullet points properly
+        st.markdown(description)
 
     st.divider()
 
@@ -39,12 +39,11 @@ def show_team():
             "Owner • Main & Lead Videographer",
             "2012 – Present",
             """
-• Founder of Babita Film Production  
-• Lead Videographer  
-• Drone Specialist  
-• Cinematic wedding film expert
-• Photo and Video editor expert
-
+- Founder of Babita Film Production
+- Lead Videographer
+- Drone Specialist
+- Cinematic wedding film expert
+- Photo and Video editor expert
             """,
             "https://www.instagram.com/babita_films?igsh=MTVxbnBnYXY5ZmR6aA=="
         )
@@ -56,10 +55,10 @@ def show_team():
             "Main Cameraman",
             "2013 – Present",
             """
-• Wedding Photographer  
-• Cinematic storytelling expert  
-• Candid photography specialist 
-• Photo and Video editor expert 
+- Wedding Photographer
+- Cinematic storytelling expert
+- Candid photography specialist
+- Photo and Video editor expert
             """,
             "https://www.instagram.com/waldiasonu?igsh=MWh0MGo2bXEzdDg5cg=="
         )
@@ -74,11 +73,11 @@ def show_team():
             "Photo • Video • Drone",
             "2007 – Present (Babita Film Production: 2013 – Present)",
             """
-• Experienced photographer  
-• Videography specialist  
-• Drone operator
-• Photo and Video editor expert
-• 15+ years experience  
+- Experienced photographer
+- Videography specialist
+- Drone operator
+- Photo and Video editor expert
+- 15+ years experience
             """,
             "https://www.instagram.com/sunilsingh1529?igsh=cjR2aGs2Z3NwcGR2"
         )
@@ -90,9 +89,9 @@ def show_team():
             "Photographer & Videographer",
             "2022 – Present",
             """
-• Creative photographer  
-• Wedding videographer  
-• Modern cinematic style  
+- Creative photographer
+- Wedding videographer
+- Modern cinematic style
             """,
             "https://www.instagram.com/vinodjyala?igsh=MW0weGs0YXRiZ3V6Mw=="
         )
@@ -107,9 +106,9 @@ def show_team():
             "Photography & Videography",
             "2021 – Present",
             """
-• Wedding photographer  
-• Videography specialist  
-• Detail-focused storytelling  
+- Wedding photographer
+- Videography specialist
+- Detail-focused storytelling
             """,
             "https://www.instagram.com/manoj.dhami.716533?igsh=MXJraGcyaHl3b2YzeA=="
         )
