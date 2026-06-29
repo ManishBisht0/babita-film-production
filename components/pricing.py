@@ -59,7 +59,7 @@ def show_pricing():
         ✅ HD Wedding Film (Pen Drive)<br>
         ✅ Designer Photo Frame (12×18)<br><br>
 
-        <b>🎬 Cinematic Upgrade : ₹60,000</b>
+        <b>🎬 Cinematic Upgrade : ₹65,000</b>
         </div>
         """, unsafe_allow_html=True)
 
@@ -73,7 +73,7 @@ def show_pricing():
         ✅ HD Wedding Film (Pen Drive)<br>
         ✅ Photo Frame (16×34)<br><br>
 
-        <b>🎬 Cinematic Upgrade : ₹70,000</b>
+        <b>🎬 Cinematic Upgrade : ₹80,000</b>
         </div>
         """, unsafe_allow_html=True)
 
@@ -87,7 +87,7 @@ def show_pricing():
         ✅ HD Wedding Film (Pen Drive)<br>
         ✅ Premium Photo Frame (20×30)<br><br>
 
-        <b>🎬 Cinematic Upgrade : ₹75,000</b>
+        <b>🎬 Cinematic Upgrade : ₹95,000</b>
         </div>
         """, unsafe_allow_html=True)
 
@@ -103,7 +103,7 @@ def show_pricing():
         ✅ HD Wedding Film (Pen Drive)<br>
         ✅ Designer Photo Frame (12×18)<br><br>
 
-        <b>🎬 Cinematic Upgrade : ₹65,000</b>
+        <b>🎬 Cinematic Upgrade : ₹75,000</b>
         </div>
         """, unsafe_allow_html=True)
 
@@ -117,22 +117,20 @@ def show_pricing():
         ✅ HD Wedding Film (Pen Drive)<br>
         ✅ Premium Photo Frame (20×30)<br><br>
 
-        <b>🎬 Cinematic Upgrade : ₹85,000</b>
+        <b>🎬 Cinematic Upgrade : ₹90,000</b>
         </div>
         """, unsafe_allow_html=True)
 
         st.markdown("""
         <div class="card diamond">
         <h3>💎 Diamond Package</h3>
-        <h2>₹1,30,000</h2>
+        <h2>₹1,50,000</h2>
 
         ✅ Photography + Videography + Drone<br>
         ✅ Cinematic Wedding Film<br>
         ✅ Pre Wedding / Post Wedding Shoot<br>
         ✅ 60-Sheet NTR Matt Album<br>
         ✅ HD Video (Pen Drive)<br><br>
-
-        <b>🎬 Cinematic Upgrade : ₹85,000</b>
         </div>
         """, unsafe_allow_html=True)
 
@@ -141,9 +139,9 @@ def show_pricing():
     st.header("🎬 Pre / Post Wedding Shoots")
 
     st.info("""
-**📍 Local Shoot (Photo + Video)** : ₹35,000 + T&C
+**📍 Local Shoot (Photo + Video)** : ₹35,000 + per day + T&C
 
-**📍 Outstation Shoot (Photo + Video)** : ₹50,000 + T&C
+**📍 Outstation Shoot (Photo + Video)** : ₹50,000 + per day + T&C
 """)
     st.markdown("---")
 
@@ -162,7 +160,7 @@ def show_pricing():
 
     <h4>⚠️ Important Note</h4>
     <ul>
-    <li>Extra day events (Haldi, Sangeet, Ganesh Pooja etc.) - ₹20,000 per day + T&C</li>
+    <li>Extra day events (Haldi, Sangeet, Ganesh Pooja etc.) - ₹10,000 per day + T&C</li>
     <li>Drone Charge: ₹6,000 per day</li>
     </ul>
 
